@@ -1,7 +1,7 @@
 # Configame TV
 
 C'est une application qui permet de voir en direct ou en replay le [configame](http://configame.h25.io/).
-Vous pouvez allé voir les créateurs du jeu sur:
+Vous pouvez aller voir les créateurs du jeu sur:
 + leur [site](https://blog.h25.io/about/)
 + leur [chaîne twitch](https://www.twitch.tv/h25io)
 + ou encore leur [serveur discord](https://discord.h25.io)
