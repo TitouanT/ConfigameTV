@@ -14,6 +14,12 @@ Après avoir cloné le repo:
 npm install
 ```
 
+## Exécution
+
+```bash
+npm start
+```
+
 ## Misc
 Vous pouvez aussi jouer en cliquant sur la carte !
 Pour cela il faut créer le fichier `window/secret.js` et y mettre votre token et votre id discord.
