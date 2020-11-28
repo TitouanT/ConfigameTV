@@ -8,7 +8,7 @@ const config = {
 	urls: {
 		root: rooturl,
 		king:  rooturl+'getKing',
-		score: rooturl+'scoreBoard',
+		score: rooturl+'scoreboard',
 		tick:  rooturl+'getPreviousTick',
 		image: rooturl+'image',
 		post: (x, y) => rooturl + 'setPosition?x=' + Math.round(x) + '&y=' + Math.round(y) + '&token=' + secret.token,
