@@ -1,0 +1,12 @@
+#!/bin/sh
+
+period=60
+phase=20
+while true
+do
+	t=$(date +%s)
+	stamp=$(python -c "print($t - $t%$period)")
+	curl http://configame.h25.io/getPreviousTick 2> /dev/null |\
+		jq -c "{ data: . , timestamp: $stamp}" >> $(date +%y_%m_%d).json
+	sleep $(python -c "print($period-($t-$phase)%$period)")
+done
