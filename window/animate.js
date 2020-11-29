@@ -83,8 +83,8 @@ function mkAnimation(rawA, rawB, canvas) {
 	const appear   = getTimedCellRenderer(aligned.appearing, movingA.voronoi);
 	const disappear = getTimedCellRenderer(aligned.disappearing, movingD.voronoi);
 
-	const appearrange = [0.5, 1];
-	const disappearrange = [0, 0.8];
+	const appearrange = [0.4, 0.9];
+	const disappearrange = [0, 0.9];
 
 	return t => {
 		const vt = d3.easeSinInOut(t);
@@ -99,7 +99,8 @@ function mkAnimation(rawA, rawB, canvas) {
 			canvas.data = {voronoi:movingD.voronoi, raw:aligned.disappearing.start};
 			drawVoronoi(canvas, local_t);
 		}
-		if (t <= appearrange[1] && t >= appearrange[0]) {
+		// if (t <= appearrange[1] && t >= appearrange[0]) { // TODO: explain to self why this is making animation glitchy (guess: floating point shenanigans)
+		if (t >= appearrange[0]) {
 			const local_t = map(t, ...appearrange, 0, 1)
 			movingA.ft(vt);
 			canvas.data = {voronoi:movingA.voronoi, raw:aligned.appearing.start};
